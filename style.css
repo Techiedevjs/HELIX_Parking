@@ -1,0 +1,369 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(15px, 1vw, 2vw);
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+    line-height: 110%;
+}
+/* OUTLINE */
+.outline {
+    position: absolute;
+    height: calc(100vh - 40px);
+    width: calc(100vw - 40px);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 20px;
+    z-index: 2;
+    display: flex;
+    border-radius: 20px;
+    pointer-events: none;
+}
+  
+.outline>span:first-child {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    right: 0;
+    top: 0;
+    box-shadow: inset -1px 1px 0 0 rgba(255, 255, 255, 0.07);
+    border-radius: 0 20px 0 0
+}
+  
+.outline>span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    box-shadow: inset 1px 1px 0 0 #00d9b24d;
+    border-radius: 20px 0 0 0
+}
+  
+.outline>span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 25px;
+    width: 25px;
+    box-shadow: inset -1px -1px 0 0 #00d9b233;
+    border-radius: 0 0 20px 0
+}
+  
+.outline>span:nth-child(4) {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    height: calc(100% - 50px);
+    width: 1px;
+    background-image: linear-gradient(to top, #00d9b233, rgba(255, 255, 255, 0.07) 50%)
+}
+  
+.outline>span:nth-child(5) {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    height: 1px;
+    width: calc(100% - 50px);
+    background-image: linear-gradient(to right, #00d9b24d, rgba(255, 255, 255, 0.07) 50%)
+}
+  
+.outline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 25px;  
+    width: 85%;
+    height: 1px;
+    background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.07), #00d9b233);
+    border-radius: 0 0 20px 0
+}
+  
+.outline::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 1px;
+    height: 85%;
+    background-image: linear-gradient(to top, transparent, rgba(255, 255, 255, 0.07), #00d9b24d);
+    border-radius: 0 0 0 20px
+}
+body{
+    background-image: url('images/bgoriginal.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+.bgcontainer{
+    background: rgba(0, 0, 0, 0.84);
+}
+.glowcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(images/glow-top-left.svg) top left no-repeat, url(images/glow-bottom-right.svg) bottom right no-repeat;
+}
+/* REPETITIVE STYLINGS */
+.center{
+    text-align: center;
+}
+.fontsmall{
+    font-size: clamp(12px, 0.8vw, 3rem);
+}
+.white65{
+    color: rgba(255, 255, 255, 0.65);
+}
+.green{
+    color: #41CCB1;
+}
+.red{
+    color: #AC3434;
+}
+.font600{
+    font-weight: 600;
+}
+.font700{
+    font-weight: 700;
+}
+.flexgap{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.flexgapsmall{
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    max-width: max-content; /* changed from vw width to max-content*/
+    margin: auto;
+}
+/* HEADER STYLING */
+header{
+    display: flex;
+    justify-content: space-between;
+    text-shadow: 0px 0px 88px rgba(255, 255, 255, 0.15);
+    margin: auto;
+    align-items: flex-end;
+}
+header h1{
+    font-size: 30px;
+    font-size: clamp(2vh, 3rem, 2vw);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+.headerimage{
+    width: clamp(2rem, 3rem, 5rem);
+}
+.headerheading{
+    font-size: clamp(16px, 1.1rem, 3rem);
+}
+/* MAIN SECTION */
+main{
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    justify-content: center;
+    position: relative;
+}
+.parkcontainer{
+    position: relative;
+}
+.park{
+    text-align: center;
+    padding: clamp(7px, 0.5vw, 25px);
+    border-radius: clamp(18px, 1vw, 70px);
+    height: clamp(150px, 32vh, 2000px);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    cursor: pointer;
+    aspect-ratio: 240/310;
+}
+.parkfree{
+    background: rgba(255, 255, 255, 0.01);
+    border: 2px solid rgba(255, 255, 255, 0.05);
+}
+.parkfree:hover{
+    background: rgba(255, 255, 255, 0.04);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+}
+.parkselected{
+    border: 2px solid rgba(0, 217, 178, 0.05);
+    background: rgba(0, 217, 178, 0.15);
+}
+.parkselected:hover{
+    background: rgba(0, 217, 178, 0.25);
+}
+.parkselected button{
+    position: absolute;
+    bottom: 0.5rem;
+    font-weight: 700;
+    color: #3F2610;
+    font-size: clamp(14px, 0.8rem, 2rem);
+    display: flex;
+    align-items: center;
+    padding: 0px 0.5vw 0 0.2vw;
+    border: none;
+    border-radius: clamp(12px, 1vw, 30px);
+    background: rgba(255, 201, 62, 0.9);
+    cursor: pointer;
+}
+.parkselected button img{
+    width: clamp(2rem, 3rem, 2vw);
+}
+.parkoccupied{
+    background: rgba(172, 52, 52, 0.08);
+    border: 2px solid rgba(172, 52, 52, 0.25);
+    cursor: no-drop;
+}
+.parkoccupied:hover{
+    background: rgba(172, 52, 52, 0.15);
+    border: 2px solid rgba(172, 52, 52, 0.45);
+}
+.dash{
+    width: 50%;
+    margin: 0 auto 5px auto;
+    height: 5px;
+    border-radius: 2px;
+}
+.parkfree .dash{
+    background: rgba(255, 255, 255, 0.11);
+}
+.parkselected .dash{
+    background: rgba(0, 217, 178, 0.35);
+}
+.parkoccupied .dash{
+    background: rgba(172, 52, 52, 0.25);
+}
+.inner{
+    flex: 1;
+    border-radius: clamp(8px, 0.8vw, 30px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-transform: uppercase;
+}
+.icons{
+    width: clamp(1.2rem, 1vw, 2vw);
+}
+.parkfree .inner{
+    background: rgba(255, 255, 255, 0.02);
+}
+.parkfree:hover .inner{
+    background: rgba(255, 255, 255, 0.08);
+}
+.parkselected .inner{
+    background-image: url(images/pattern-green.svg), url(images/green-dashed.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parkselected:hover .inner{
+    background-image: url(images/pattern-green-hover.svg), url(images/green-dashed.svg);
+}
+.parkoccupied .inner{
+    border: 2px solid rgba(172, 52, 52, 0.05);
+    background-image: url(images/pattern-red.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parkoccupied:hover .inner{
+    background-image: url(images/pattern-red-hover.svg);
+}
+.id{
+    padding: 0.7vh 0.7vw;
+    font-weight: 700;
+    line-height: 103%;
+    text-align: center;
+    letter-spacing: 0.12em;
+    width: max-content;
+    margin: auto;
+    border-radius: 0 0px clamp(5px, 0.5vw, 20px) clamp(5px, 0.5vw, 20px);
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+    text-shadow: 0px 0px 88px rgba(255, 255, 255, 0.15);
+}
+.parkfree .id{
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.65);
+}
+.parkselected .id{
+    background: #41CCB1;
+    color: #0B463B;
+}
+.parkoccupied .id{
+    background-color: #2B0D0B;
+    color: rgba(172, 52, 52, 0.65);
+}
+.leftbtn , .rightbtn{
+    border: 3px solid black;
+    border-radius: clamp(11px, 1vw, 30px);
+    background-color: white;
+    padding: 0.5vw;
+    transform: translateY(-50%);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 110%;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+.leftbtn img, .rightbtn img{
+    width: clamp(0.5rem, 8px, 12px);
+}
+.leftbtn{
+    position: absolute;
+    left: -4vw;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.rightbtn{
+    position: absolute;
+    right: -4vw;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.page{
+    position: relative;
+}
+.escape{
+    position: absolute;
+    right: 5vw;
+    bottom: 3vw;
+}
+.esc{
+    padding: 0.2vw 0.5vw;
+    box-shadow: -4px 0px 14px rgba(0, 0, 0, 0.75);
+    border-radius: clamp(8px, 0.5vw, 20px);
+    border: none;
+}
+
+@media screen and (min-width: 1300px) {
+    main{
+        gap: 1.5rem;
+    }
+    .park{
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width:2400px) {
+    .leftbtn , .rightbtn{
+        font-size: larger;
+    }
+}

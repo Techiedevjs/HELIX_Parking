@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>HELIX - PARKING</title>
+</head>
+<body>
+    <figure class="outline">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </figure>
+
+    <section class="bgcontainer">
+        <div class="glowcontainer">
+        <section class="container">
+            <header>
+                <section class="flexgap">
+                    <img src="images/IconP.svg" alt="P" class="headerimage">
+                    <div>
+                        <p class="font600 white65 fontsmall">FREE PLACES</p>
+                        <h3 class="headerheading" id="freeplaces"></h3>
+                    </div>
+                </section>
+
+                <section class="center">
+                    <h1 class="font700">PARKING 16</h1>
+                    <div class="white65 flexgapsmall"> <img src="images/time.svg" alt="time" class="icons"> Parking is given for 24 hours </div>
+                </section>
+
+                <section class="flexgap">
+                    <img src="images/wallet.svg" alt="wallet" class="headerimage">
+                    <div>
+                        <p class="font600 white65 fontsmall">YOUR WALLET</p>
+                        <div class="flexgapsmall"> <h3 class="headerheading" id="walletvalue"></h3> <img src="images/lix-white.svg" alt="lix-white" class="icons"> </div>
+                    </div>
+                </section>
+            </header>
+
+            <div class="parkcontainer">
+                <button class="leftbtn ">
+                    <img src="images/arrow-left.svg" alt="arrow left"> Q
+                </button>
+                <button class="rightbtn">
+                    E <img src="images/arrow-right.svg" alt="arrow-right">
+                </button>
+                <main id="parks">
+                <!-- ELEMENTS GENERATED THROUGH JAVASCRIPT -->
+                </main>
+            </div>
+            <div class="center page">
+                <p> <span id="currentpage">1</span> / <span id="lastpage" class="white65">10</span></p>
+                <h3 class="white65 font600">PAGE</h3>
+            </div>
+        </section>
+    </div>
+        <div class="flexgapsmall escape">
+            <button class="esc font600 fontsmall">Esc</button>
+            <p class="white65 fontsmall">BACK</p>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
